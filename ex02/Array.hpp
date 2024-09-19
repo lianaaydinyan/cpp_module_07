@@ -1,22 +1,26 @@
 #ifndef _array_
 #define _array_
 
+
+#include <stdexcept>
+#include <cstddef>
+
 template <typename T>
 class Array
 {
-    private:
-        T*           my_arr;
-        unsigned int size;
-    public:
-        Array() : my_arr(nullptr) , size(0) {};
-        ~Array() { delete my_arr[] };
-        Array(unsigned int n) { my_arr = new T[](); } ;
-        Array(const Array& copy) {};
-        Array& operator=(const Array& copy);
-        T& operator[] (std::size_t index);
-        unsigned int size() const;
+private:
+    T* my_arr;
+    unsigned int arr_size;
+public:
+    Array();
+    Array(unsigned int n);
+    ~Array();
+    Array(const Array& other);
+    Array& operator=(const Array& other);
+    T& operator[](std::size_t index);
+    const T& operator[](std::size_t index) const;
+    unsigned int size() const;
 };
-
 
 #include "Array.tpp"
 
