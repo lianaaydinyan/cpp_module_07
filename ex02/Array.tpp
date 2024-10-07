@@ -1,5 +1,5 @@
 template <typename T>
-Array<T>::Array() : my_arr(nullptr), arr_size(0) {}
+Array<T>::Array() : my_arr(NULL), arr_size(0) {}
 
 template <typename T>
 Array<T>::Array(unsigned int n) : arr_size(n)
